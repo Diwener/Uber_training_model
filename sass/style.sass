@@ -1,0 +1,334 @@
+$classic_color: #ffffff
+$classic_font: Roboto
+$section_color: #000000
+
+@mixin gradient_btn
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%)
+    font-family: $classic_font
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2)
+    color: $classic_color 
+
+@mixin sect_title($color)
+    font-family: $classic_font 
+    font-size: 38px
+    line-height: 48px
+    font-weight: 700
+    text-transform: uppercase
+    color: $color
+    text-align: center
+    margin-top: 38px
+    margin-bottom: 19px
+
+@mixin sect_subTitle($color)
+    font-family: $classic_font
+    font-size: 17px
+    font-weight: 400
+    color: $color
+    text-align: center
+           
+header
+    background-color: #212121
+    .navbar 
+        padding: 10px 0 0 0
+        .navbar_list
+            display: flex
+            padding: 0 
+            align-items: center
+            .navbar_item
+                border-right: dashed 2px #000
+                // padding: 0 40px 0 0 
+                // display: block
+                text-align: center
+                .navbar_link
+                    font-family: $classic_font
+                    font-size: 15px
+                    font-weight: 300
+                    color: $classic_color
+                    text-decoration: none
+                    text-align: center
+                    padding: 0 50px 0 0
+            .navbar_item:last-child   
+                border: none
+                padding: 0
+
+main
+    background: url("../img/backgrounds/main_bg.png") no-repeat center/cover 
+    .company_title
+        background-color: rgba(0, 0, 0, 0.6)
+        .logo
+            padding: 16px 0 0 0 
+            p
+                opacity: 0.5
+                font-family: $classic_font
+                font-size: 13px
+                font-weight: 100
+                color: $classic_color
+        .call 
+            padding: 20px 0 0 0
+            p
+                font-family: $classic_font
+                font-size: 12px
+                font-weight: 300
+                color: $classic_color
+                margin: 0
+                float: right
+            span
+                font-family: $classic_font
+                font-size: 22px
+                font-weight: 400
+                text-transform: uppercase
+                color: $classic_color
+                float: right
+        .call_btn 
+            margin: 16px 0 0 30px
+            button
+                @include gradient_btn
+                width: 100%
+                height: 52px
+                border-radius: 5px
+                padding: 5px
+    .greeting_message
+        text-align: center
+        h1
+            font-family: $classic_font
+            font-size: 60px
+            font-weight: 900
+            text-transform: uppercase
+            color: $classic_color
+            margin-top: 67px
+        h2
+            font-family: $classic_font
+            font-size: 36px
+            font-weight: 700
+            text-transform: uppercase
+            color:  $classic_color
+            margin-bottom: 23px
+        p
+            font-family: $classic_font
+            font-size: 18px
+            font-weight: 400
+            color: $classic_color
+            padding: 23px
+        button
+            @include gradient_btn
+            width: 265px
+            height: 69px
+            border-radius: 4px
+            font-size: 18px
+            margin-top: 115px
+            margin-bottom: 132px
+
+.section_title
+    width: 112px
+    height: 24px
+    margin: 0 auto 
+    background-color: $section_color
+    font-family: $classic_font
+    font-size: 11px
+    font-weight: 100
+    text-transform: uppercase
+    color: $classic_color
+    text-align: center
+    padding-top: 5px
+
+.title
+    @include sect_title(#222222)
+
+.subTitle
+    @include sect_subTitle(#222222)
+    
+.advantage
+    padding-top: 71px
+    padding-bottom: 68px
+    .reason
+        display: flex
+        flex-wrap: wrap
+        margin-top: 40px
+        &_item
+            display: flex
+            align-items: center
+            min-height: 141px
+            padding-right: 25px
+            margin-top: 35px
+            &_desciption
+                font-family: $classic_font
+                font-size: 15px
+                font-weight: 300
+                color: #202020
+                padding-left: 26px
+                span
+                    font-family: $classic_font
+                    font-size: 17px
+                    font-weight: 400
+                    color: #1eacc7
+
+.mobile
+    background: url("../img/backgrounds/mobileSect_bg.png") no-repeat center/cover
+    padding-top: 48px
+    padding-bottom: 79px
+    .row
+        margin-top: 32px
+    &_item
+        width: 320px
+        height: 280px
+        margin: 0 auto 19px auto 
+        position: relative
+        flex-wrap: wrap
+        &_1
+            background: url("../img/icon/mobile_page_1.png")
+        &_2
+            background: url("../img/icon/mobile_page_2.png")
+        &_3
+            background: url("../img/icon/mobile_page_3.png")
+        &_4
+            background: url("../img/icon/mobile_page_4.png")
+        &_5
+            background: url("../img/icon/mobile_page_5.png")
+        &_6
+            background: url("../img/icon/mobile_page_6.png")
+        &_title
+            font-family: $classic_font
+            font-size: 24px
+            font-weight: 400
+            text-transform: uppercase
+            color: $classic_color
+            text-align: center
+            padding-top: 91px
+        &_plus
+            width: 26px
+            height: 26px
+            background-color: #000000
+            border-radius: 100%
+            transform: translateX(-50%)
+            position: absolute
+            bottom: 35px
+            left: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                display: block
+
+.choose
+    padding: 56px 0 131px 0
+    background: url("../img/backgrounds/OrderingSect_bg.png") no-repeat center/cover
+    .section_title
+        color: #070716
+        background-color: $classic_color
+    .title
+        @include sect_title($classic_color)
+    .subTitle
+        @include sect_subTitle($classic_color)
+    p
+        text-align: center
+        font-family: $classic_font
+        font-size: 17px
+        font-weight: 300
+        color: #222222
+        margin-top: 65vh
+
+.terms_requirements
+    padding: 68px 0 84px 0
+    .info_table
+        min-width: 478px
+        margin-bottom: 62px
+        &_title
+            font-family: $classic_font
+            font-size: 22px
+            font-weight: 400
+            color: #1ca8c3
+            &_red
+                color: #ff5656
+        &_item
+            font-family: $classic_font
+            font-size: 17px
+            font-weight: 300
+            color: #222222
+            padding: 14px 0 0 19px
+            &_mark
+                font-family: $classic_font
+                font-size: 17px
+                font-weight: 300
+                color: #1ca8c3
+                margin-top: 20px
+
+.map
+    padding: 50px 0
+    background: url("../img/backgrounds/worldMap_bg.png") no-repeat center/cover
+    .section_title
+        color: #070716
+        background-color: $classic_color
+    .title
+        @include sect_title($classic_color)
+    .subTitle
+        @include sect_subTitle($classic_color)
+    &_link 
+        text-align: center
+        margin-top: 70vh
+        &_a
+            font-family: $classic_font
+            font-size: 15px
+            font-weight: 400
+            text-transform: uppercase
+            color: #1fbad6
+            text-decoration: none
+
+footer
+    padding: 14px 23px 39px 23px
+    hr
+        width: 299px
+        height: 4px
+        background-color: #1fbad6
+        opacity: 1
+        border: none
+        margin: 0 auto
+    .row
+        align-items: center 
+        padding-top: 30px
+        .web_link
+            align-items: center
+            max-width: 13vw 
+            & img
+                width: 32px
+                margin-right: 7px
+        .app_link
+            max-width: 13vw 
+            float: right
+            & img
+                height: 27px
+                padding: 0 3px
+        .landing_link
+            margin: 0 auto
+            width: 765px
+            &_main
+                margin-bottom: 12px
+                text-align: center
+                & a
+                    font-family: $classic_font
+                    font-size: 15px
+                    font-weight: 300
+                    text-transform: uppercase
+                    color: #070716
+                    text-decoration: none
+                    display: inline
+                    padding: 0 24px
+            &_secondary
+                text-align: center
+                & a
+                    font-family: $classic_font
+                    font-size: 11px
+                    font-weight: 300
+                    text-transform: uppercase
+                    color: #999999
+                    display: inline
+                    text-decoration: none
+                    padding: 0 11px
+
+.endLine
+    height: 8px
+    background-color: #070716
+    
+                    
